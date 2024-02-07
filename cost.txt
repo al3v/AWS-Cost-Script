@@ -10,7 +10,7 @@ REGIONS=("us-east-1" "us-west-1" "eu-west-1" "ap-southeast-1")
 
 for region in "${REGIONS[@]}"
 do
-  echo "Fetching costs for region: $region"
+  echo "Fetching costs for REGION: $region"
   echo "----------------------------------------"
   
   # Use the AWS CLI to call the AWS Cost Explorer API and query costs for the specified region
