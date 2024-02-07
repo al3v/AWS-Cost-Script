@@ -63,7 +63,10 @@ Service: Amazon S3 - Cost: 78.910 USD
 ----------------------------------------
 
 ```
-![image](https://github.com/al3v/AWS-Cost-Script/assets/73062283/5615f8bc-4329-4cf9-9c6a-43e43fc14b88)
+![image](https://github.com/al3v/AWS-Cost-Script/assets/73062283/2ae9d284-348d-4168-850a-b5a95e94e28a)
+
+
+
 
 
 
