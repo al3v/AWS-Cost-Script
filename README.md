@@ -54,7 +54,7 @@ REGIONS=("us-east-1" "us-west-1" "eu-west-1" "ap-southeast-1")
 
 ## Output Format
 ```bash
-Fetching costs for region: us-east-1
+Fetching costs for REGION: us-east-1
 ----------------------------------------
 2024-01-01 to 2024-02-01:
 Service: Amazon EC2 - Cost: 123.456 USD
