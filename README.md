@@ -68,6 +68,17 @@ Service: Amazon S3 - Cost: 78.910 USD
 
 
 
+## ✨PS: 
+You can check available regions for your account using AWS CLI by running the following command:
+```bash
+   aws ec2 describe-regions --output table
+```
+or
+```bash
+   aws ec2 describe-regions --query 'Regions[*].RegionName' --output text
+
+```
+
 
 
 
