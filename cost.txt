@@ -13,13 +13,13 @@ do
   echo "Fetching costs for region: $region"
   echo "----------------------------------------"
   
-  # Use the AWS CLI to call the get-cost-and-usage command and group by service
+  # Use the AWS CLI to call the AWS Cost Explorer API and query costs for the specified region
   aws ce get-cost-and-usage \
     --time-period Start=$START_DATE,End=$END_DATE \
     --granularity MONTHLY \
     --metrics "UnblendedCost" \
     --group-by Type=DIMENSION,Key=SERVICE \
-    --region $region | jq -r '
+    --filter "Dimensions={Key=REGION,Values=$region}" | jq -r '
       .ResultsByTime[] | "\(.TimePeriod.Start) to \(.TimePeriod.End):",
       (.Groups[] | "Service: \(.Keys[0]) - Cost: \(.Metrics.UnblendedCost.Amount | tonumber | . as $num | $num | tostring | capture("^(?<intPart>\\d+)\\.(?<decPart>\\d{1,3})") | "\(.intPart).\(.decPart)") USD"),
       "*********"'
